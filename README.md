@@ -11,7 +11,7 @@ $ pip install icalendar
 
 ## Client
 
-Yeoman angular generator boilerplate
+We are using Yeoman's Angular generator. All you need to do to run the client is:
 
 ```sh
 $ cd client

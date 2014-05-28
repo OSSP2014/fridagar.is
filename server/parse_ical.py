@@ -15,8 +15,8 @@ class IcsParser:
 		Method getIcs
 		Parameters:
 			country: string, e.g. 'isl', 'eng', 'usa'
-			fromYear: string, e.g. '2014', '2015'
-			toYear: string, e.g. '2015', '2016'
+			fromYear: string from 01-01, e.g. '2014', '2015'
+			toYear: string to 31-12, e.g. '2015', '2016'
 		Returns: dictionary {'holidayName': vText('example'), 'holidayDate': datetime.date(2014, 12, 25)}
 	'''
 	def getIcs(self, country, fromYear, toYear):

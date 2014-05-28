@@ -1,6 +1,8 @@
 fridagar.is
 ===========
 
+https://codeship.io/projects/31c901b0-c8e4-0131-efe8-1273abb7643a/status
+
 ## Server
 
 iCalendar python module: https://pypi.python.org/pypi/icalendar/2.1

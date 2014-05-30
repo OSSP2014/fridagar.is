@@ -17,5 +17,7 @@ We are using Yeoman's Angular generator. All you need to do to run the client is
 
 ```sh
 $ cd client
+$ npm install
+$ bower install
 $ grunt serve
 ```

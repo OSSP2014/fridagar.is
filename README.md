@@ -6,7 +6,6 @@ fridagar.is
 ## Quick Setup
 
 ```sh
-$ cd client
 $ npm install
 $ bower install
 $ grunt serve

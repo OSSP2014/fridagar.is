@@ -298,17 +298,29 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
-          cwd: 'heroku',
-          src: '*',
-          rename: function (dest, src) {
-            var path = require('path');
-            if (src === 'distpackage.json') {
-              return path.join(dest, 'package.json');
-            }
-            return path.join(dest, src);
-          }
+          src: [
+            '*.{ico,png,txt}',
+            '.htaccess',
+            '*.html',
+            'views/{,*/}*.html',
+            'images/{,*/}*.{webp}',
+            'fonts/*'
+          ]
+        }, {
+          expand: true,
+          cwd: '.tmp/images',
+          dest: '<%= yeoman.dist %>/images',
+          src: ['generated/*']
         }]
+      },
+      styles: {
+        expand: true,
+        cwd: '<%= yeoman.app %>/styles',
+        dest: '.tmp/styles/',
+        src: '{,*/}*.css'
       }
     },
 

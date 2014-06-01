@@ -421,6 +421,7 @@ module.exports = function (grunt) {
     'concat',
     'ngmin',
     'copy:dist',
+    'copy:styles',
     'copy:heroku',
     'cdnify',
     'cssmin',

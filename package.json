@@ -42,7 +42,8 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "grunt test",
-    "postInstall": "bower install && grunt build"
+    "postinstall": "bower install && grunt build"
   }
 }

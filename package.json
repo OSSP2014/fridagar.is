@@ -43,7 +43,6 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "grunt test",
-    "postinstall": "grunt build"
+    "test": "grunt test"
   }
 }

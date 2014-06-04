@@ -1,7 +1,7 @@
 fridagar.is
 ===========
 
-![Build Status](https://codeship.io/projects/31c901b0-c8e4-0131-efe8-1273abb7643a/status)
+![Build Status](https://codeship.io/projects/944d2590-cb2a-0131-ec9e-32e5a64033be/status?branch=master)
 
 ## Quick Setup
 

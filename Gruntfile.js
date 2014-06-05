@@ -321,15 +321,6 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      },
-      heroku: {
-        expand: true,
-        cwd: 'heroku/',
-        dest: '<%= yeoman.dist %>',
-        src: [
-          'Procfile',
-          '*.js'
-        ]
       }
     },
 
@@ -422,7 +413,6 @@ module.exports = function (grunt) {
     'ngmin',
     'copy:dist',
     'copy:styles',
-    'copy:heroku',
     'cdnify',
     'cssmin',
     'uglify',

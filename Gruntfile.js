@@ -103,7 +103,8 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js'
+        '<%= yeoman.app %>/scripts/{,*/}*.js',
+        '!<%= yeoman.app %>/scripts/appconfig.js'
       ],
       test: {
         options: {
@@ -371,6 +372,40 @@ module.exports = function (grunt) {
         configFile: 'karma.conf.js',
         singleRun: true
       }
+    },
+
+    /**
+    * The angular configuration task that sets our API constants properly
+    */
+    ngconstant: {
+      options: {
+        space: '  ',
+        wrap: '"use strict";\n\n {%= __ngModule %}',
+        name: 'endpoint-config'
+      },
+      // Environment targets
+      development: {
+        options: {
+          dest: '<%= yeoman.app %>/scripts/appconfig.js',
+        },
+        constants: {
+          ENV: {
+            name: 'development',
+            api: 'http://127.0.0.1:5000/api/'
+          }
+        }
+      },
+      build: {
+        options: {
+          dest: '<%= yeoman.app %>/scripts/appconfig.js',
+        },
+        constants: {
+          ENV: {
+            name: 'build',
+            api: 'http://127.0.0.1:5000/api/'
+          }
+        }
+      }
     }
   });
 
@@ -385,6 +420,7 @@ module.exports = function (grunt) {
       'bowerInstall',
       'concurrent:server',
       'autoprefixer',
+      'ngconstant:development',
       'connect:livereload',
       'watch'
     ]);

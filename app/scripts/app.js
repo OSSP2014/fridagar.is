@@ -6,7 +6,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'angular-datafetcher'
+    'angular-datafetcher',
+    'endpoint-config'
   ])
   .config(function ($routeProvider) {
     $routeProvider

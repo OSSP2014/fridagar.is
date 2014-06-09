@@ -1,11 +1,9 @@
 'use strict';
 
 angular.module('fridagarApp')
-  .controller('MainCtrl', function ($scope, datafetcher) {
+  .controller('MainCtrl', function ($scope, Holidayservice) {
     $scope.buttonValue = 'Yee boy';
-    datafetcher.get('http://apis.is/bus/realtime').then(function (data) {
-      console.log(data);
-    }, function (reason) {
-      console.log(reason);
+    Holidayservice.getHolidays().then(function (holidays) {
+      console.log(holidays);
     });
   });

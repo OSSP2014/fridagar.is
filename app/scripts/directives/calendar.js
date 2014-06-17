@@ -14,7 +14,7 @@ angular.module('fridagarApp')
               <% }); %> \
               <div class="days clearfix"> \
                 <% _.each(days, function(day) { %> \
-                  <div class="<%= day.classes %>"><%= day.day %></div> \
+                  <div class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span></div> \
                 <% }); %> \
               </div> \
             </div> \

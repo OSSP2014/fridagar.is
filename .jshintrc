@@ -18,8 +18,10 @@
   "strict": true,
   "trailing": true,
   "smarttabs": true,
+  "multistr": true,
   "globals": {
     "angular": false,
-    "moment": false
+    "moment": false,
+    "$": false
   }
 }

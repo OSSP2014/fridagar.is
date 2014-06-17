@@ -1,0 +1,83 @@
+.cal {
+  max-width: 177px;
+  margin: 0 auto;
+  .clndr {
+    .clndr-controls {
+      display: block;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 3px;
+      .clndr-previous-button {
+        float: left;
+        width: 10%;
+        text-align: left;
+        cursor: pointer;
+        -webkit-user-select: none;
+        /* Chrome/Safari */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* IE10+ */
+        &:hover {
+          background-color: #f4f4f4;
+        }
+      }
+      .month {
+        float: left;
+        width: 80%;
+        text-align: center;
+      }
+      .clndr-next-button {
+        float: left;
+        width: 10%;
+        text-align: right;
+        cursor: pointer;
+        -webkit-user-select: none;
+        /* Chrome/Safari */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* IE10+ */
+        &:hover {
+          background-color: #f4f4f4;
+        }
+      }
+    }
+    .clndr-grid {
+      text-align: center;
+      border: 1px solid #FF4545;
+      display: inline-block;
+      .header-day {
+        float: left;
+        width: 25px;
+        height: 25px;
+        background: #FF4545;
+      }
+      .day {
+        float: left;
+        width: 25px;
+        height: 25px;
+        &.event {
+          background-color: #B4E09F;
+        }
+        &.today {
+          background-color: #E3C57F;
+        }
+      }
+      .empty, .adjacent-month {
+        float: left;
+        width: 25px;
+        height: 25px;
+        background: #ddd;
+      }
+    }
+    .clndr-today-button {
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}

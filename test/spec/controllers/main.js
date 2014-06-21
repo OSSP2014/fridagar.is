@@ -27,7 +27,9 @@ describe('Controller: MainCtrl', function () {
     });
     it('should have a \'holidays\' object', function () {
       expect(scope.holidays).toBeDefined();
-      expect(scope.holidays.result).toBe(1);
+    });
+    it('should take the value of the \'result\' object', function () {
+      expect(scope.holidays).toBe(1);
     });
   });
 });

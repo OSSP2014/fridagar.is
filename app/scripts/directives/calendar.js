@@ -8,6 +8,7 @@ angular.module('fridagarApp')
         events: '='
       },
       link: function postLink(scope, element) {
+        console.log(scope.events);
         var _calendar,
             _template =
               '<div class="clndr-grid"> \
@@ -25,15 +26,9 @@ angular.module('fridagarApp')
         // finally, init the calendar
         _calendar = $(element).clndr({
           template: _template,
-          events: [ {date: '2014-06-19'} ]
+          events: scope.events,
+          dateParameter: 'holidayDate'
         });
-
-        scope.$watch('events', function (events) {
-          if (events.length) {
-            console.log(events);
-            _calendar.setEvents(events);
-          }
-        }, true);
       }
     };
   });

@@ -5,6 +5,5 @@ angular.module('fridagarApp')
     //
     // scope variables
     //
-    $scope.holidays = holidays;
-    console.log($scope.holidays);
+    $scope.holidays = holidays.result;
   });

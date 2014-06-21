@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('fridagarApp')
-  .controller('MainCtrl', function ($scope, Holidayservice) {
-    $scope.holidays = {};
-    Holidayservice.getHolidays().then(function (holidays) {
-      $scope.holidays = holidays;
-    });
+  .controller('MainCtrl', function ($scope, holidays) {
+    //
+    // scope variables
+    //
+    $scope.holidays = holidays;
+    console.log($scope.holidays);
   });

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fridagarApp')
-  .service('Holidayservice', function Holidayservice(ENV, $datafetcher) {
+  .service('holidayservice', function Holidays(ENV, $datafetcher) {
     return {
       //
       // API communication
@@ -23,6 +23,41 @@ angular.module('fridagarApp')
           url += from + '/' + to;
         }
         return $datafetcher.get(url);
+      },
+      //
+      // Service methods
+      //
+
+      /**
+       * Returns how many holidays there are in the current month.
+       * param: currentDate - the current date. 
+       * param: holidays - list of holidays that should be counted
+       */
+      countHolidaysInMonth: function(currentDate, holidays) {
+        var count = 0;
+        angular.forEach(holidays, function (holiday) {
+          if (moment(holiday.holidayDate).isSame(currentDate, 'month')) {
+            count++;
+          }
+        });
+        return count;
+      },
+      /**
+       * Returns how many days there are until next holiday.
+       * param: currentDate - the current date.
+       * param: holidays - the list of holidays.
+       */
+      daysToNextHoliday: function (currentDate, holidays) {
+        var days;
+        angular.forEach(holidays, function (holiday) {
+          if (moment(holiday.holidayDate).isAfter(currentDate)) {
+            var temp = moment(holiday.holidayDate).diff(currentDate, 'days');
+            if (angular.isUndefined(days) || temp < days) {
+              days = temp;
+            }
+          }
+        });
+        return days;
       }
     };
   });

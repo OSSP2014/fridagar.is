@@ -1,30 +1,10 @@
 <div class="row">
-  <div class="span12">
-
-    <!-- Begin Title -->
-    <div class="row">
-      <div class="span12">
-        <div class="title-page">
-          <h2 class="title">Frídagar.is <small class="title-description color-text">Hvenær er frí?</small></h2>
-        </div>
-      </div>
-    </div>
-    <!-- End Title -->
-
-    <!-- Start BlockQuote/Tooltip Section -->
-    <div class="row">
-      <!-- Start CLNDR -->
-      <div class="cal clearfix" calendar events="holidays"></div>  
-      <!-- End CLNDR -->
-    </div>
-    <!-- End BlockQuote/Tooltip Section -->
-    
-    <!-- HR RULER -->
-    <div class="row">
-      <div class="span12">
-        <hr>
-      </div>
-    </div>
-    <!-- End HR RULER -->
+  <!-- Start CLNDR -->
+  <div class="col-md-8">
+    <div class="cal clearfix" calendar events="holidays"></div>  
   </div>
+  <div class="col-md-4">
+    <p>Það eru <span class="color-text">{{holidaysInCurrentMonth}}</span> frídagar í þessum mánuði. Næsti frídagur er eftir <span class="color-text">{{daysToNextHoliday}}</span> daga.
+  </div>
+  <!-- End CLNDR -->
 </div>

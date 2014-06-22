@@ -15,8 +15,8 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         resolve: {
-          holidays: ['Holidayservice', function (Holidayservice) {
-            return Holidayservice.getHolidays();
+          holidays: ['holidayservice', function (holidayservice) {
+            return holidayservice.getHolidays();
           }]
         }
       })

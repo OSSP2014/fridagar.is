@@ -6,11 +6,10 @@ describe('Controller: MainCtrl', function () {
   beforeEach(module('fridagarApp'));
 
   var initController,
-      scope,
-      Holidayservice;
+      scope;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope, $injector) {
+  beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     initController = function () {
       return $controller('MainCtrl', {
@@ -18,7 +17,6 @@ describe('Controller: MainCtrl', function () {
         holidays: { result: 1 }
       });
     };
-    Holidayservice = $injector.get('Holidayservice');
   }));
 
   describe('Initialization', function () {

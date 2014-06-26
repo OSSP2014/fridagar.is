@@ -6,8 +6,27 @@ $dark-blue: #3883a3;
   background-color: $light-gray;
   font-weight: 700;
 
+  .controls {
+    .clndr-previous-button, .clndr-next-button {
+      width: 15%;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .month {
+      width: 70%;
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+
   .clndr-grid {
-    border-right: 2px solid white;
 
     .days-of-the-week {
       width: 100%;

@@ -11,7 +11,12 @@ angular.module('fridagarApp')
         console.log(scope.events);
         var _calendar,
             _template =
-              '<div class="clndr-grid"> \
+              '<div class="controls clearfix"> \
+                <div class="clndr-previous-button">&lsaquo;</div> \
+                <div class="month"><%= month %></div> \
+                <div class="clndr-next-button">&rsaquo;</div> \
+               </div> \
+               <div class="clndr-grid"> \
                 <div class="days-of-the-week clearfix"> \
                   <% _.each(daysOfTheWeek, function(day) { %> \
                     <div class="header-day"><%= day %></div> \

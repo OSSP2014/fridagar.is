@@ -23,4 +23,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function ($window) {
+    $window.moment.lang('is');
   });

@@ -24,6 +24,7 @@ angular.module('fridagarApp')
         }
         return $datafetcher.get(url);
       },
+      
       //
       // Service methods
       //

@@ -19,8 +19,8 @@ describe('Service: holidayservice', function () {
     it('should have \'getHolidays\' function', function () {
       expect(holidayservice.getHolidays).toBeDefined();
     });
-    it('should have a \'countHolidaysInMonth\' function', function () {
-      expect(holidayservice.countHolidaysInMonth).toBeDefined();
+    it('should have a \'holidaysInMonth\' function', function () {
+      expect(holidayservice.holidaysInMonth).toBeDefined();
     });
     it('should have a \'daysToNextHoliday\' function', function () {
       expect(holidayservice.daysToNextHoliday).toBeDefined();
@@ -63,8 +63,9 @@ describe('Service: holidayservice', function () {
       ];
     });
 
-    it('should count holidays in the current month correctly', function () {
-      expect(holidayservice.countHolidaysInMonth(currDate, holidays)).toBe(2);
+    it('should return the holidays in a given month', function () {
+      var result = holidayservice.holidaysInMonth(currDate, holidays);
+      expect(result.length).toBe(2);
     });
 
     it('should count down to holidays correctly', function () {

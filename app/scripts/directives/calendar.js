@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fridagarApp')
-  .directive('calendar', function () {
+  .directive('calendar', function ($rootScope) {
     return {
       restrict: 'A',
       scope: {
@@ -32,7 +32,18 @@ angular.module('fridagarApp')
         _calendar = $(element).clndr({
           template: _template,
           events: scope.events,
-          dateParameter: 'holidayDate'
+          dateParameter: 'holidayDate',
+          //
+          // click events
+          //
+          clickEvents: {
+            nextMonth: function (month) {
+              $rootScope.$emit('click:next', month);
+            },
+            previousMonth: function(month){
+              $rootScope.$emit('click:prev', month);
+            }
+          }
         });
       }
     };

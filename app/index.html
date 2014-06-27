@@ -41,11 +41,11 @@
     <header>
       <div class="sticky-nav">
         <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
-          <nav id="menu">
-            <ul id="menu-nav">
-              <li><a href="">Um Frídagar.is</a></li>
-              </ul>
-          </nav>
+        <!-- <nav class="icons-example">
+          <ul>
+            <li><a href="#"><span class="font-icon-question-sign"></span></a></li>
+          </ul>
+        </nav> -->
       </div>
     </header>
     <!-- End Header -->
@@ -96,11 +96,13 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="bower_components/moment/lang/is.js"></script>
         <script src="scripts/appconfig.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/services/holidayservice.js"></script>
         <script src="scripts/directives/calendar.js"></script>
+        <script src="scripts/filters/momentdate.js"></script>
         <!-- endbuild -->
 </body>
 </html>

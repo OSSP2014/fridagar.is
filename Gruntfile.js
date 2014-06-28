@@ -327,7 +327,7 @@ module.exports = function (grunt) {
         expand: true,
         flatten: true,
         dest: '<%= yeoman.dist %>/',
-        src: ['heroku/*']
+        src: ['heroku/*', 'package.json']
       }
     },
 

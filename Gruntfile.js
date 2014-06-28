@@ -402,7 +402,7 @@ module.exports = function (grunt) {
         constants: {
           ENV: {
             name: 'build',
-            api: 'http://127.0.0.1:5000/api/'
+            api: 'http://murmuring-spire-5393.herokuapp.com/api/'
           }
         }
       }
@@ -441,6 +441,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'ngconstant:build',
     'bowerInstall',
     'useminPrepare',
     'concurrent:dist',

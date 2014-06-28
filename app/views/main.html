@@ -7,6 +7,8 @@
     <div class="holiday-details">
       <div class="holiday-details-title"><h3 class="title-description">Frídagar í þessum mánuði</h3></div>
       <div class="holiday-details-events" ng-show="holidaysInCurrentMonth.length != 0">
+        Það eru <span class="color-text">{{holidaysInCurrentMonth.length}}</span> frídagar í þessum mánuði.
+        <hr>
         <div class="holiday-details-event" ng-repeat="holiday in holidaysInCurrentMonth">
           <span class="holiday-details-event-number color-text">{{holiday.holidayDate | momentdate:'DD'}}.</span> 
           <span class="holiday-details-event-name"> {{holiday.holidayName}}</span>
@@ -17,7 +19,6 @@
         Engir frídagar í þessum mánuði :(
       </div>
     </div>
-    <hr>
   </div>
   <!-- End CLNDR -->
 </div>

@@ -13,12 +13,12 @@ angular.module('fridagarApp')
     //
     // register to events
     //
-    $rootScope.$on('click:next', function (event, month) {
-      $scope.$apply(function () {
-        $scope.holidaysInCurrentMonth = holidayservice.holidaysInMonth(month, $scope.holidays);
-      });
-    });
-    $rootScope.$on('click:prev', function (event, month) {
+
+    /**
+     * Everytime the calendar changes month, this grabs the event
+     * and updates the 'holidaysInCurrentMonth' object.
+     */
+    $rootScope.$on('click:monthchange', function (event, month) {
       $scope.$apply(function () {
         $scope.holidaysInCurrentMonth = holidayservice.holidaysInMonth(month, $scope.holidays);
       });

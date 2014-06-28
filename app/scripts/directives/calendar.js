@@ -37,11 +37,8 @@ angular.module('fridagarApp')
           // click events
           //
           clickEvents: {
-            nextMonth: function (month) {
-              $rootScope.$emit('click:next', month);
-            },
-            previousMonth: function(month){
-              $rootScope.$emit('click:prev', month);
+            onMonthChange: function (month) {
+              $rootScope.$emit('click:monthchange', month);
             }
           }
         });

@@ -14,7 +14,7 @@ describe('Controller: MainCtrl', function () {
     initController = function () {
       return $controller('MainCtrl', {
         $scope: scope,
-        holidays: { result: 1 }
+        holidays: 1
       });
     };
   }));

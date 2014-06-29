@@ -15,7 +15,8 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         resolve: {
-          holidays: ['holidayservice', function (holidayservice) {
+          holidays: ['holidayservice', 'loadingservice', function (holidayservice, loadingservice) {
+            loadingservice.blockUI();
             return holidayservice.getHolidays();
           }]
         }

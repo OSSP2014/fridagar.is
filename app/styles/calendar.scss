@@ -1,17 +1,34 @@
 $light-gray: #ebebeb;
 $dark-gray: #dedede;
-$dark-blue: #3883a3;
+$sexy-red: #DE5E60;
 
 .cal {
   background-color: $light-gray;
   font-weight: 700;
 
+  .controls {
+    .clndr-previous-button, .clndr-next-button {
+      text-align: center;
+      cursor: pointer;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .month {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+
   .clndr-grid {
-    border-right: 2px solid white;
 
     .days-of-the-week {
       width: 100%;
-      background-color: $dark-blue;
+      background-color: $sexy-red;
 
       .header-day {
         float: left;
@@ -40,7 +57,7 @@ $dark-blue: #3883a3;
 
       .day.event .day-number, .empty.event .day-number {
         padding-bottom: 4px;
-        border-bottom: 2px solid $dark-blue;
+        border-bottom: 2px solid $sexy-red;
       }
 
       .day.adjacent-month .day-number, .empty.adjacent-month .day-number {

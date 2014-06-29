@@ -322,6 +322,12 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      heroku: {
+        expand: true,
+        flatten: true,
+        dest: '<%= yeoman.dist %>/',
+        src: ['heroku/*', 'package.json']
       }
     },
 
@@ -402,7 +408,7 @@ module.exports = function (grunt) {
         constants: {
           ENV: {
             name: 'build',
-            api: 'http://127.0.0.1:5000/api/'
+            api: 'http://murmuring-spire-5393.herokuapp.com/api/'
           }
         }
       }
@@ -433,6 +439,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
+    'ngconstant:development',
     'concurrent:test',
     'autoprefixer',
     'connect:test',
@@ -441,6 +448,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'ngconstant:build',
     'bowerInstall',
     'useminPrepare',
     'concurrent:dist',
@@ -454,7 +462,8 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'copy:heroku'
   ]);
 
   grunt.registerTask('default', [

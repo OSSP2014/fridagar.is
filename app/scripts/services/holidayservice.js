@@ -24,23 +24,26 @@ angular.module('fridagarApp')
         }
         return $datafetcher.get(url);
       },
+      
       //
       // Service methods
       //
 
       /**
-       * Returns how many holidays there are in the current month.
+       * Returns the holidays in the given date of month.
        * param: currentDate - the current date. 
-       * param: holidays - list of holidays that should be counted
+       * param: holidays - list of holidays that should be counted.
        */
-      countHolidaysInMonth: function(currentDate, holidays) {
-        var count = 0;
+      holidaysInMonth: function(currentDate, holidays) {
+        var result = [];
         angular.forEach(holidays, function (holiday) {
+          console.log(holidays)
           if (moment(holiday.holidayDate).isSame(currentDate, 'month')) {
-            count++;
+            console.log(holiday)
+            result.push(holiday);
           }
         });
-        return count;
+        return result;
       },
       /**
        * Returns how many days there are until next holiday.

@@ -3,8 +3,8 @@
  angular.module("endpoint-config", [])
 
 .constant("ENV", {
-  "name": "development",
-  "api": "http://127.0.0.1:5000/api/"
+  "name": "build",
+  "api": "http://murmuring-spire-5393.herokuapp.com/api/"
 })
 
 ;

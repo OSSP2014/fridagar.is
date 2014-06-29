@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('fridagarApp')
-  .controller('MainCtrl', function ($rootScope, $scope, holidays, holidayservice) {
+  .controller('MainCtrl', function ($rootScope, $scope, holidays, holidayservice, loadingservice) {
+    loadingservice.releaseUI();
     //
     // scope variables
     //

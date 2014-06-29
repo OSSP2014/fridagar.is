@@ -32,9 +32,11 @@
     <![endif]-->
 
     <!-- This section is for Splash Screen -->
-      <!-- <section id="jSplash">
-        <div id="circle"></div>
-      </section> -->
+      <section id="jSplash" ng-if="loading">
+        <div id="circle">
+            <div id="jprePercentage">Huxa</div>
+        </div>
+      </section>
     <!-- End of Splash Screen -->
 
      <!-- Header -->
@@ -103,6 +105,7 @@
         <script src="scripts/services/holidayservice.js"></script>
         <script src="scripts/directives/calendar.js"></script>
         <script src="scripts/filters/momentdate.js"></script>
+        <script src="scripts/services/loadingservice.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fridagarApp')
-  .service('holidayservice', function Holidays(ENV, $datafetcher) {
+  .service('holidayservice', function holidayservice(ENV, $datafetcher) {
     return {
       //
       // API communication

@@ -9,11 +9,7 @@
       <div class="holiday-details-events" ng-show="holidaysInCurrentMonth.length != 0">
         Það eru <span class="color-text">{{holidaysInCurrentMonth.length}}</span> frídagar í þessum mánuði.
         <hr>
-        <div class="holiday-details-event" ng-repeat="holiday in holidaysInCurrentMonth">
-          <span class="holiday-details-event-number color-text">{{holiday.holidayDate | momentdate:'DD'}}.</span> 
-          <span class="holiday-details-event-name"> {{holiday.holidayName}}</span>
-        </div>
-        <!-- Það eru <span class="color-text">{{holidaysInCurrentMonth}}</span> frídagar í þessum mánuði. Næsti frídagur er eftir <span class="color-text">{{daysToNextHoliday}}</span> daga. -->
+        <holiday ng-repeat="holiday in holidaysInCurrentMonth" data="holiday"></holiday>
       </div>
       <div class="holiday-details-events" ng-show="holidaysInCurrentMonth.length == 0">
         Engir frídagar í þessum mánuði :(

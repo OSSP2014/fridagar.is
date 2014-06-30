@@ -8,7 +8,6 @@ angular.module('fridagarApp')
         events: '='
       },
       link: function postLink(scope, element) {
-        console.log(scope.events);
         var _calendar,
             _template =
               '<div class="controls row"> \

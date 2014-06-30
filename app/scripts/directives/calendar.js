@@ -32,6 +32,7 @@ angular.module('fridagarApp')
           template: _template,
           events: scope.events,
           dateParameter: 'holidayDate',
+          forceSixRows: true,
           //
           // click events
           //

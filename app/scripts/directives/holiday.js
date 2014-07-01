@@ -12,11 +12,7 @@ angular.module('fridagarApp')
       controller: function ($scope) {
         var now = moment();
         var holiday = moment($scope.holiday.holidayDate);
-        if (holiday.isBefore(now)) {
-          $scope.holiday.passed = true;
-        } else {
-          $scope.holiday.isAfter = holiday.from(now);
-        }
+        $scope.holiday.isAfter = holiday.from(now);
       }
     };
   });

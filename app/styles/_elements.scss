@@ -18,13 +18,24 @@ button {
 	}
 }
 
-.bird-header {
+.bird-header-bottom {
+	position: absolute;
+	float: right;
+	z-index: 100;
+	top: 137px;
+	right: 150px;
+	float: right;
+	width: 24px;
+}
+
+.bird-header-top {
+	position: absolute;
+	float: right;
+	z-index: 101;
+	top: 74px;
+	right: 100px;
 	float: right;
 	width: 110px;
-	right: 10%;
-	position: absolute;
-	z-index: 100;
-	top: 72px;
 }
 
 #app-download img {

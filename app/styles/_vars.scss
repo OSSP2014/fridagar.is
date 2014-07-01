@@ -1,0 +1,37 @@
+@import "http://fonts.googleapis.com/css?family=Montserrat";
+
+// SASS Global Variables
+
+// Monochrome
+$light-grey: 		  	#fafafa;
+$medium-grey: 	  	#eeeeee;
+$dark-grey: 		  	#444444;
+$emph-grey:					lighten($dark-grey, 15%);
+
+// Primaries
+$main-blue: 		  	lighten(desaturate(#03a9f4, 15%), 15%);
+$main-red: 			  	lighten(desaturate(#ff5252, 5%), 5%);
+
+// Modular scale
+$ms-base: 			  	16px;
+$ms-ratio: 			  	1.25;
+$ms-lhm:						1.8em;
+
+// Open Sans
+$font-family: 	  	'Open Sans', sans-serif;
+$font-family-alt:		'Montserrat', sans-serif;
+$font-weight:		  	400;
+$font-weight-bold:	400;
+
+// Section padding
+$section-pad:		  	85px 20px;
+$section-pad-tb:		85px;
+
+@media screen and (max-width: 768px) {
+	$section-pad:		  	55px 15px;
+	$section-pad-tb:		55px;
+}
+
+// Calendar
+$day-width:					(100% / 7);
+

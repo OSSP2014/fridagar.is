@@ -11,9 +11,9 @@ angular.module('fridagarApp')
         var _calendar,
             _template =
               '<div class="controls row"> \
-                <div class="clndr-previous-button col-md-2">&lsaquo;</div> \
-                <div class="month col-md-8"><%= month %></div> \
-                <div class="clndr-next-button col-md-2">&rsaquo;</div> \
+                <div class="clndr-previous-button col-md-2 col-xs-2"><span class="glyphicon glyphicon-chevron-left"</span></div> \
+                <div class="month col-md-8 col-xs-8"><%= month %></div> \
+                <div class="clndr-next-button col-md-2 col-xs-2"><span class="glyphicon glyphicon-chevron-right"</span></div> \
                </div> \
                <div class="clndr-grid"> \
                 <div class="days-of-the-week clearfix"> \

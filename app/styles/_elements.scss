@@ -1,0 +1,185 @@
+button {
+	padding: 17px 18px 20px 16px;
+	background-color: $main-red;
+	color: $light-grey;
+	text-transform: uppercase;
+	margin-top: 20px;
+	border: 0;
+	.glyphicon {
+		padding-right: 5px;
+		top: 2px;
+	}
+	&:hover {
+		background-color: darken($main-red, 2%);
+	}
+	&:active {
+		background-color: darken($main-red, 4%);
+	}
+}
+
+.bird-header {
+	float: right;
+	width: 110px;
+	right: 10%;
+	position: absolute;
+	z-index: 1;
+	top: 72px;
+
+	@media screen and (max-width: 768px) {
+		width: 80px;
+		top: 102px;
+	}
+}
+
+#app-download img {
+	width: 35%;
+	max-width: 400px;
+	float: right;
+	display: inline;
+	width: 35%;
+	max-width: 700px;
+	min-width: 310px;
+	float: right;
+	display: inline;
+	margin: -20% 0 0 0;
+
+	@media screen and (max-width: 768px) {
+		margin: -24% 0 0 0;
+	}
+	@media screen and (max-width: 680px) {
+		display: none;
+	}
+}
+
+.ossp-logo {
+	width: 85px;
+	height: 60px;
+	float: left;
+	@media screen and (max-width: 645px) {
+		float: none;
+		margin: 5% auto;
+	}
+}
+
+.footer-navigation {
+	color: $medium-grey;
+	margin-top: 12px;
+	float: right;
+
+	li {
+		display: inline;
+		margin: 0 0 0 7px;
+		@media screen and (min-width: 645px) {
+			padding: 0 0 0 15px;
+		}
+	}
+	@media screen and (max-width: 645px) {
+		margin: 0 auto 5% auto;
+		float: none;
+		padding-left: 0;
+	}
+}
+
+// Clouds 
+
+/* Time to finalise the cloud shape */
+.cloud {
+	width: 200px;
+	height: 60px;
+	background: #fff;
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	position: relative;
+	@media screen and (max-width: 678	px) {
+		display: none;
+	}
+}
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute;
+	background: #fff;
+	width: 100px;
+	height: 80px;
+	position: absolute;
+	top: -15px;
+	left: 10px;
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+.cloud:after {
+	width: 120px;
+	height: 120px;
+	top: -55px;
+	left: auto;
+	right: 15px;
+}
+
+/* Time to animate */
+.x2 {
+	left: 450px;
+	top: 45px;
+	@include cloud-animate(0.75);
+}
+.x3 {
+	left: 200px;
+	top: 30px;
+	@include cloud-animate(0.65);
+}
+.x4 {
+	left: 0px;
+	top: -60px;
+	@include cloud-animate(0.6);
+}
+.x5 {
+	left: 300px;
+	top: -150px;
+	@include cloud-animate(0.55);
+}
+
+@mixin move-clouds($viewport) {
+	@-webkit-keyframes moveclouds {
+		0% {
+			margin-left: ($viewport + 100 + px);
+		}
+		100% {
+			margin-left: (-$viewport - 100 + px);
+		}
+	}
+	@-moz-keyframes moveclouds {
+		0% {
+			margin-left: ($viewport + 100 + px);
+		}
+		100% {
+			margin-left: (-$viewport - 100 + px);
+		}
+	}
+	@-o-keyframes moveclouds {
+		0% {
+			margin-left: ($viewport + 100 + px);
+		}
+		100% {
+			margin-left: (-$viewport - 100 + px);
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	@include move-clouds(1200)
+}
+@media screen and (max-width: 1000px) {
+	@include move-clouds(1000)
+}
+@media screen and (max-width: 800) {
+	@include move-clouds(800)
+}
+@media screen and (max-width: 600px) {
+	@include move-clouds(600)
+}
+@media screen and (max-width: 500px) {
+	@include move-clouds(500)
+}

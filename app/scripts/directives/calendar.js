@@ -12,7 +12,7 @@ angular.module('fridagarApp')
             _template =
               '<div class="controls row"> \
                 <div class="clndr-previous-button col-md-2">&lsaquo;</div> \
-                <div class="month col-md-8"><%= month %></div> \
+                <div class="month col-md-8"><%= month %>, <%= year %></div> \
                 <div class="clndr-next-button col-md-2">&rsaquo;</div> \
                </div> \
                <div class="clndr-grid"> \

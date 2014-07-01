@@ -27,11 +27,6 @@ $font-weight-bold:	400;
 $section-pad:		  	85px 20px;
 $section-pad-tb:		85px;
 
-@media screen and (max-width: 768px) {
-	$section-pad:		  	55px 15px;
-	$section-pad-tb:		55px;
-}
-
 // Calendar
 $day-width:					(100% / 7);
 

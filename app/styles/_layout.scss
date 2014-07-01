@@ -9,40 +9,61 @@ body {
 }
 
 #app-calendar {
-	padding: $section-pad;
+	overflow: hidden;
+	padding: 80px 0 80px 0;
 	background-color: $light-grey;
+	z-index: 100;
 	.page {
 		padding: 0;
 		background-color: transparent;
 	}
 
-	// @media screen and (max-width: 768px) {
-	// 	padding: 0;
-	// }
+	.container {
+		@media screen and (max-width: 768px) {
+			padding: 0;
+			margin: 0;		
+		}
+	}
 
 	.holiday-details {
-		@media screen and (min-width: 991px) {
-			margin-left: -20px;
+		@media screen and (min-width: 990px) {
+			margin-left: 20px;
 		}
 		@media screen and (max-width: 768px) {
-			padding: 50px 30px 0 30px
+			padding: 50px 45px;
 		}
+	}
+	@media screen and (max-width: 990px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	@media screen and (max-width: 768px) {
+		padding: 0;
+		margin: 0;
 	}
 }
 
 #app-download {
-	padding: $section-pad;
+	padding: $section-pad-tb 0;
 	background-color: $medium-grey;
 	.col-md-12 {
 		padding: 0;
 	}
+	@media screen and (max-width: 768px) {
+		padding: 50px 0px 50px 30px;
+	}
 }
 
 #app-footer {
-	padding: $section-pad;
+	padding: 50px 0;
 	background-color: $dark-grey;
 
+	.col-md-12 {
+		padding: 0;
+	}
+
 	@media screen and (max-width: 768px) {
-		margin: 0 0;
+		margin: 0;
+		padding: 50px 30px;
 	}
 }

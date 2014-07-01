@@ -1,5 +1,9 @@
 .cal {
   background-color: $medium-grey;
+  z-index: 1;
+  @media scren and (max-width: 990px) {
+    padding: 5% 2%;
+  }
 
   .controls {
     height: 80px;
@@ -33,7 +37,7 @@
 
     .days {
       width: 100%;
-      z-index: 99;
+      z-index: 2;
 
       .day, .empty {
         float: left;
@@ -51,7 +55,7 @@
       .day.event .day-number, .empty.event .day-number {
         border-bottom: 2px solid $main-red;
         padding-bottom: 4px;
-        z-index: 99;
+        z-index: 3;
       }
 
       .event {

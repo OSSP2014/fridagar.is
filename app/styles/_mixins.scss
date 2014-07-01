@@ -1,0 +1,20 @@
+@mixin test($foo) {
+	content: $foo;
+}
+
+@mixin circle($radius, $color) {
+	border-radius: 50%;
+	width: $radius;
+	height:	$radius; 
+	background-color: $color;
+}
+
+@mixin cloud-animate($prop) {
+	-webkit-transform: scale($prop);
+	-moz-transform: scale($prop);
+	transform: scale($prop);
+	opacity: $prop;
+	-webkit-animation: moveclouds ($prop * 75 + s) linear infinite;
+	-moz-animation: moveclouds ($prop * 75 + s) linear infinite;
+	-o-animation: moveclouds ($prop * 75 + s) linear infinite;
+}	

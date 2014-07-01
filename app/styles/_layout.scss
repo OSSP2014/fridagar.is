@@ -1,0 +1,48 @@
+body {
+	background-color: $light-grey;
+}
+
+#app-header {
+	height: 165px;
+	background-color: $main-blue;
+	overflow: hidden;
+}
+
+#app-calendar {
+	padding: $section-pad;
+	background-color: $light-grey;
+	.page {
+		padding: 0;
+		background-color: transparent;
+	}
+
+	// @media screen and (max-width: 768px) {
+	// 	padding: 0;
+	// }
+
+	.holiday-details {
+		@media screen and (min-width: 991px) {
+			margin-left: -20px;
+		}
+		@media screen and (max-width: 768px) {
+			padding: 50px 30px 0 30px
+		}
+	}
+}
+
+#app-download {
+	padding: $section-pad;
+	background-color: $medium-grey;
+	.col-md-12 {
+		padding: 0;
+	}
+}
+
+#app-footer {
+	padding: $section-pad;
+	background-color: $dark-grey;
+
+	@media screen and (max-width: 768px) {
+		margin: 0 0;
+	}
+}

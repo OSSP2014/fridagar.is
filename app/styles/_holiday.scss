@@ -1,0 +1,34 @@
+
+// Holiday (main.html)
+
+.title-description {
+	padding-top: 12px;
+
+	@media screen and (max-width: 991px) {
+		padding-top: 42px;
+	}
+	@media screen and (max-width: 768px) {
+		padding-top: 0px;
+	}
+}
+
+.holiday-details-event {
+	padding-bottom: 12px;
+	.holiday-details-event-circle {
+		@include circle(40px, $main-red);
+		text-align: center;
+		display: inline;
+		position: absolute;
+		display: inline;
+		padding: 5px;
+		margin-top: 6px;
+
+		.holiday-details-event-number {
+			color: $light-grey;
+			top: 2px;
+		}
+	}
+	.holiday-details-event-name {
+		margin-left: 50px;
+	}
+}

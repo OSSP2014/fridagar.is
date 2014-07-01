@@ -1,0 +1,103 @@
+
+// Font sizes
+
+body{ 
+	font-size: 16px;
+	line-height: $ms-lhm;
+	font-family: $font-family;
+	font-weight: $font-weight;
+
+	p,li {
+		color: lighten($dark-grey, 25%);
+	}
+}
+
+h1,h2,h3,h4,h5 {
+	font-family: $font-family-alt;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: $emph-grey;
+	text-shadow: 0px 2px 1px rgba(255, 255, 255, 1.0);
+}
+
+h5 {
+  font-size: 21px;
+  line-height: $ms-lhm; 
+}
+
+h4 {
+  font-size: 24px;
+  line-height: $ms-lhm; 
+}
+
+h3 {
+  font-size: 34px;
+  line-height: $ms-lhm; 
+}
+
+h2 {
+  font-size: 42px	;
+  line-height: $ms-lhm; 
+}
+
+h1 {
+  font-size: 55px;
+  line-height: $ms-lhm; 
+}
+
+li {
+	line-height: $ms-lhm;
+	margin-left: -20px;
+}
+
+// Calendar typography
+
+.cal {
+	.month {
+		font-size: 24px;
+    text-align: center;
+    font-family: $font-family-alt;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.5);
+  }
+	.days-of-the-week {
+		font-weight: $font-weight-bold;
+	}
+	.day-number {
+		font-size: 16px;
+		font-family: $font-family;
+		font-weight: $font-weight;
+		line-height: 0px;
+	}
+}
+
+.holiday-details-event-number {
+	font-size: 14px;
+}
+
+.holiday-details-event-name {
+	color: $dark-grey;
+	line-height: 1em;
+}
+
+.holiday-details-event-isafter {
+	margin-left: 50px;
+	top: -6px;
+	color: lighten($emph-grey, 25%);
+	font-size: 14px;
+	font-style: italic;
+	position: relative;
+	display: inline;
+}
+
+// Buttons 
+
+button {
+	font-family: $font-family-alt;
+	font-size: 0.75em;
+	line-height: 0px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+}

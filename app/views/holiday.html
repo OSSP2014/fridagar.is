@@ -1,4 +1,7 @@
 <div class="holiday-details-event" ng-class="{passed: holiday.passed}">
-  <span class="holiday-details-event-number color-text">{{holiday.holidayDate | momentdate:'DD'}}.</span> 
-  <span class="holiday-details-event-name"> {{holiday.holidayName}}<span ng-if="holiday.isAfter">, {{holiday.isAfter}}</span></span>
+	<div class="holiday-details-event-circle">
+  	<span class="holiday-details-event-number color-text">{{holiday.holidayDate | momentdate:'DD'}}</span> 
+  </div>
+  <span class="holiday-details-event-name">{{holiday.holidayName}}</span>
+  <span class="holiday-details-event-isafter" ng-if="holiday.isAfter"><br>{{holiday.isAfter}}</span>
 </div>

@@ -13,13 +13,7 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        resolve: {
-          holidays: ['holidayservice', 'loadingservice', function (holidayservice, loadingservice) {
-            loadingservice.blockUI();
-            return holidayservice.getHolidays();
-          }]
-        }
+        controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'

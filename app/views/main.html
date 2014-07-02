@@ -1,9 +1,10 @@
-<div class="row">
-  <!-- Start CLNDR -->
+<div class="row" ng-if="loading">
+  <div spinner></div>
+</div>
+<div class="row" ng-if="!loading">
   <div class="col-md-7">
-    <div class="cal clearfix" calendar events="holidays"></div>  
+    <div class="cal clearfix" calendar events="holidays"></div>
   </div>
-
   <div class="col-md-5 col-xs-12">
     <div class="holiday-details">
       <div class="holiday-details-title">
@@ -13,20 +14,11 @@
         <p>Það eru <span class="color-text">{{holidaysInCurrentMonth.length}}</span> frídagar í þessum mánuði.</p>
         <hr>
         <holiday ng-repeat="holiday in holidaysInCurrentMonth" data="holiday"></holiday>
-<!-- =======
-        <div class="holiday-details-event" ng-repeat="holiday in holidaysInCurrentMonth">
-          <div class="holiday-details-event-circle">
-            <span class="holiday-details-event-number color-text">{{holiday.holidayDate | momentdate:'DD'}}</span> 
-          </div>
-          <span class="holiday-details-event-name"> {{holiday.holidayName}}</span>
-        </div>
-        <!-- <p>Það eru <span class="color-text">{{holidaysInCurrentMonth}}</span> frídagar í þessum mánuði. Næsti frídagur er eftir <span class="color-text">{{daysToNextHoliday}}</span> daga.</p> -->
       </div>
       <div class="holiday-details-events" ng-show="holidaysInCurrentMonth.length == 0">
         <p>Engir frídagar í þessum mánuði :(</p>
       </div>
     </div>
   </div>
-  <!-- End CLNDR -->
 </div>
 

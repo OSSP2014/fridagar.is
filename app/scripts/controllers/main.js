@@ -3,9 +3,13 @@
 angular.module('fridagarApp')
   .controller('MainCtrl', function ($rootScope, $scope, holidayservice, loadingservice) {
     //
-    // scope variables
+    // private variables
     //
     var _today = moment().format('YYYY-MM-DD');
+
+    //
+    // scope variables
+    //
     $scope.holidays = {};
 
     //

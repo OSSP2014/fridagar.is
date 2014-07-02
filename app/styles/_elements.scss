@@ -171,7 +171,7 @@ button {
 	margin: 1em 0 3em;
 	color: $emph-grey;
 	background: $light-grey;
-	border-radius: 30px;
+	border-radius: 18px;
 	top: 50px;
 	right: 220px;
 
@@ -197,11 +197,11 @@ button {
 	margin-right: 50px;
 	background: $light-grey;
 	&:after {
-	  top: 22px;
-		right: -32px;
-	  bottom:auto;
-	  left:auto;
-	  border-width:10px 0 10px 50px;
+		top: 22px;
+		right: -20px;
+		bottom: auto;
+		left: auto;
+		border-width: 10px 0 10px 20px;
 	  border-color:transparent $light-grey;
 	}
 }

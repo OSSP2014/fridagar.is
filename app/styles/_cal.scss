@@ -50,6 +50,10 @@
         border: 1px solid $light-grey;
         background-size: cover;
         background-position: center;
+        @media screen and (max-width: 450px) {
+          height: 45px;
+          padding: 10px 0;
+        }
       }
 
       .day.event .day-number, .empty.event .day-number {
